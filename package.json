@@ -1,0 +1,15 @@
+{
+  "name": "jest-exit",
+  "version": "1.0.0",
+  "description": "Testcase of what happens when you SIGINT a jest process",
+  "main": "index.js",
+  "author": "cowboyd@frontside.com",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jest": "^27.4.7"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
