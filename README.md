@@ -1,5 +1,10 @@
 ## Reproduction
 
+This is a reproduction of the following Jest Issues:
+
+1. https://github.com/facebook/jest/issues/12259
+2. https://github.com/facebook/jest/issues/10927
+
 It appears that jest is not calling `afterEach` and `afterAll` hooks when you
 hit CTRL-C to send a SIGINT. Also, it somehow interferes with the calling of the
 node process `exit` and `beforeExit` hooks.
