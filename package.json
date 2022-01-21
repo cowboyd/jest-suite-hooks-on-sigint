@@ -10,6 +10,9 @@
     "jest": "^27.4.7"
   },
   "scripts": {
-    "test": "jest"
+    "test": "rm -rf ./*.txt && jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0"
   }
 }

@@ -1,9 +1,18 @@
+const { writeFileSync } = require('fs');
+
+process.on('exit', () => {
+  writeFileSync('process.exit.txt', "ok\n");
+})
+process.on('beforeExit', () => {
+  writeFileSync('process.beforeExit.txt', "ok\n");
+})
+
 describe("beforeExit", () => {
-  afterAll(function*() {
-    console.log('afterAll');
-  })
-  afterEach(function*() {
-    console.log('afterEach');
+  afterAll(() => {
+    writeFileSync('afterAll.txt', "ok\n");
+  });
+  afterEach(() => {
+    writeFileSync('afterEach.txt', "ok\n");
   })
 
   it('sleeps for a bit to give you a chance to send SIGINT', async () => {
@@ -11,4 +20,4 @@ describe("beforeExit", () => {
       setTimeout(resolve, 5000);
     });
   }, 6000);
-})
+});
